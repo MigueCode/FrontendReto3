@@ -1,3 +1,6 @@
+// Importacion de modulos
+import { getBarcos } from "./barcos.js";
+
 // Variable del Document
 const $d = document
 
@@ -14,4 +17,22 @@ const $guardarCategorias = $d.getElementById("category-save"),
          $guardarClientes = $d.getElementById("client-save"),
          $guardarMensajes = $d.getElementById("message-save"),
          $guardarReservaciones = $d.getElementById("reservation-save")
+
+// Agregamos los eventos de los botones
+
+$d.addEventListener("click", e => {
+
+  if(e.target === $consultarBarcos) {
+  getBarcos()
+  console.log(e.target)
+  e.target.setAttribute("disabled","true")
+  }  
+
+  if(e.target === $consultarCategorias) {
+  getCategorias()
+  console.log(e.target)
+  e.target.setAttribute("disabled","true")
+  }  
+
+})
 

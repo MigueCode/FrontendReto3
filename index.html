@@ -9,35 +9,92 @@
 </head>
 
 <body>
+  <header class="cabecera">
+    <h1>Alquiler de Barcos</h1>
+  </header>
+
+  <!-- CATEGORIAS -->
   <h2>Categorias</h2>
-  <button id="category-get">Consultar Categorias</button>
-  <input type="text" placeholder="Name">
-  <input type="text" placeholder="Description">
-  <button id="category-save">Guardar Categorias</button>
+  <div class="inputs">
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Description">
+  </div>
+  <div class="buttons">
+    <button id="category-save">Guardar Categorias</button>
+    <button id="category-get">Consultar Categorias</button>
+  </div>
+
+  <!-- BARCOS -->
   <h2>Barcos</h2>
-  <button id="boat-get">Consultar Barcos</button>
-  <input type="text" placeholder="Brand">
-  <input type="text" placeholder="Name">
-  <input type="number" placeholder="Model">
-  <input type="text" placeholder="Description">
-  <button id="boat-save">Guardar Barcos</button>
+  <!-- AQUI SE PINTARA MEDIANTE JS LA TABLA QUE TRAE LA CONSULTA DE LOS BARCOS -->
+  <div id="tablaBarcosDiv"></div>
+  <template id="tablaBarcos">
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Name</th>
+          <th>Model</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="brand"></td>
+          <td class="name"></td>
+          <td class="model"></td>
+          <td class="description"></td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+
+  <!-- LOS INPUTS DE EL REGISTRO DE BARCOS -->
+  <div class="inputs">
+    <input type="text" placeholder="Brand">
+    <input type="text" placeholder="Name">
+    <input type="number" placeholder="Model">
+    <input type="text" placeholder="Description">
+  </div>
+  <div class="buttons">
+    <button id="boat-save">Guardar Barcos</button>
+    <button id="boat-get">Consultar Barcos</button>
+  </div>
+
+  <!-- CLIENTES -->
   <h2>Clientes</h2>
-  <button id="client-get">Consultar Clientes</button>
-  <input type="email" placeholder="Email">
-  <input type="password" placeholder="Password">
-  <input type="text" placeholder="Name">
-  <input type="number" placeholder="Age">
-  <button id="client-save">Guardar Clientes</button>
+  <div class="inputs">
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <input type="text" placeholder="Name">
+    <input type="number" placeholder="Age">
+  </div>
+  <div class="buttons">
+
+    <button id="client-save">Guardar Clientes</button>
+    <button id="client-get">Consultar Clientes</button>
+  </div>
   <h2>Mensajes</h2>
-  <button id="message-get">Consultar Mensajes</button>
-  <input type="text" placeholder="Message">
-  <button id="message-save">Guardar Mensaje</button>
+  <div class="inputs">
+
+    <input type="text" placeholder="Message">
+  </div>
+  <div class="buttons">
+
+    <button id="message-save">Guardar Mensaje</button>
+    <button id="message-get">Consultar Mensajes</button>
+  </div>
   <h2>Reservaciones</h2>
-  <button id="reservation-get">Consultar Reservaciones</button>
-  <button id="reservation-save">Guardar Reservaciones</button>
+  <div class="inputs"></div>
+  <div class="buttons">
+
+    <button id="reservation-save">Guardar Reservaciones</button>
+    <button id="reservation-get">Consultar Reservaciones</button>
+  </div>
 
 
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
